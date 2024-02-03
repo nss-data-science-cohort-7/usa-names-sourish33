@@ -41,3 +41,24 @@ Save a script containing the query you used to answer each question and your ans
 19. Find the names that have not be used in the longest.
 
 20. Come up with a question that you would like to answer using this dataset. Then write a query to answer this question.
+
+
+1. Find the longest name contained in this dataset. What do you notice about the long names?
+
+2. How many names are palindromes (i.e. read the same backwards and forwards, such as Bob and Elle)?
+
+3. Find all names that contain no vowels (for this question, we'll count a,e,i,o,u, and y as vowels). (Hint: you might find this page helpful: https://www.postgresql.org/docs/current/functions-matching.html)
+
+4. How many double-letter names show up in the dataset? Double-letter means the same letter repeated back-to-back, like Matthew or Aaron. Are there any triple-letter names?
+
+5. On question 17 of the first part of the exercise, you found names that only appeared in the 1950s. Now, find all names that did not appear in the 1950s but were used both before and after the 1950s. We'll answer this question in two steps.
+	a. First, write a query that returns all names that appeared during the 1950s.
+	b. Now, make use of this query along with the IN keyword in order the find all names that did not appear in the 1950s but which were used both before and after the 1950s. See the example "A subquery with the IN operator." on this page: https://www.dofactory.com/sql/subquery.
+
+6. In question 16, you found how many names appeared in only one year. Which year had the highest number of names that only appeared once?
+
+7. Which year had the most new names (names that hadn't appeared in any years before that year)? For this question, you might find it useful to write a subquery and then select from this subquery. See this page about using subqueries in the from clause: https://www.geeksforgeeks.org/sql-sub-queries-clause/
+
+8. Is there more variety (more distinct names) for females or for males? Is this true for all years or are their any years where this is reversed? Hint: you may need to make use of multiple subqueries and JOIN them in order to answer this question.
+
+9. Which names are closest to being evenly split between male and female usage? For this question, consider only names that have been used at least 10000 times in total. 
